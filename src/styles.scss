@@ -146,3 +146,42 @@ select {
     box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);
 }
+
+@media (max-width:810px) {
+    .button {
+        padding: 6px 20px;
+        max-width: 145px;
+    }
+}
+
+@media (max-width: 769px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    .button {
+        padding: 4px 50px;
+    }
+
+    select {
+        padding: 4px 25px;
+    }
+}
+
+@media (max-width:630px) {
+    select {
+        padding: 4px 10px;
+    }
+}
+
+@media(max-width:480px) {
+    .button {
+        padding: 16px 2px;
+        font-size: 0px;
+    }
+
+    .button::after {
+        font-size: 14px;
+        padding-left: 0px;
+    }
+}

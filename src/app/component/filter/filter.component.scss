@@ -1,9 +1,22 @@
 .filter {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem auto;
-    padding: 1rem;
-    &--speed-price{
-      margin-left: auto;
+  display: flex;
+  gap: 1rem;
+  margin: 1rem auto;
+  padding: 1rem;
+
+  &--speed-price {
+    margin-left: auto;
+  }
+}
+
+@media (max-width:480px) {
+  .filter {
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    &--speed-price {
+      margin-left: 0;
     }
   }
+
+}

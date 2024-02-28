@@ -66,3 +66,112 @@
         }
     }
 }
+
+
+@media (max-width:910px) {
+
+    .container .content .debit .download .bit--container .bit--value,
+    .container .content .debit .upload .bit--container .bit--value {
+        padding: 0px 1rem;
+    }
+}
+
+@media (max-width: 810px) {
+    .container {
+        .id {
+            border-right: none;
+            align-items: start;
+            padding: 5px 0px 0px 10px;
+        }
+
+        .content {
+            .benifits {
+                display: none;
+            }
+
+            .debit {
+
+                .download,
+                .upload {
+                    .bit--title {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:640px) {
+    .container .content {
+        >* {
+            padding: 0.6rem;
+        }
+    }
+}
+
+@media (max-width:585px) {
+
+    .container .content .debit .download .bit--container .bit--icon,
+    .container .content .debit .upload .bit--container .bit--icon {
+        padding: .3rem 1rem;
+    }
+
+    .container .content .debit .download .bit--container .bit--value,
+    .container .content .debit .upload .bit--container .bit--value {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        .id {
+            border-right: none;
+            align-items: start;
+            padding: 5px 0px 0px 10px;
+        }
+
+        .content {
+            .debit {
+
+                .download {
+                    .bit--container {
+                        .bit--icon {
+                            border: none;
+                            padding: 0.3rem;
+                        }
+
+                        .bit--value {
+                            border: none;
+                            padding: .3rem;
+                        }
+                    }
+                }
+
+                .upload {
+                    display: none;
+                }
+            }
+
+            .price {
+                flex-direction: row;
+                justify-content: end;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+@media (max-width:365px) {
+    .container {
+        font-size: 13px;
+        .content .price {
+            font-size: 16px;
+        }
+        .id {
+            padding: 5px 0px 0px 5px;
+        }
+    }
+
+
+}
