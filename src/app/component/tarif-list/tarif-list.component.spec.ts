@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TarifListComponent } from './tarif-list.component';
+import { TarifItemComponent } from './tarif-item/tarif-item.component';
 
 describe('TarifListComponent', () => {
   let component: TarifListComponent;
@@ -8,7 +8,7 @@ describe('TarifListComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TarifListComponent]
+      declarations: [TarifListComponent,TarifItemComponent]
     });
     fixture = TestBed.createComponent(TarifListComponent);
     component = fixture.componentInstance;
