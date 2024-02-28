@@ -1,1 +1,36 @@
-<p>tarif-item works!</p>
+<div class="container">
+    <div class="id">{{tarifItem.id}}.</div>
+    <div class="content">
+        <div class="name"> {{tarifItem.name}} </div>
+        <div class="debit">
+            <div class="download">
+                <div class="bit--title">download</div>
+                <div class="bit--container">
+                    <div class="bit--icon">&#8595;</div>
+                    <div class="bit--value">
+                        {{tarifItem.debit.download}} mbit/s
+                    </div>
+                </div>
+            </div>
+
+            <div class="upload">
+                <div class="bit--title">upload</div>
+                <div class="bit--container">
+                    <div class="bit--icon">&#8593;</div>
+                    <div class="bit--value">
+                        {{tarifItem.debit.upload}} mbit/s
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="benifits">
+            <ul *ngFor="let benifit of tarifItem.benefit">
+                <li>{{benifit}}</li>
+            </ul>
+        </div>
+        <div class="price">
+            {{tarifItem.price}}
+            <a href="#" class="button">to tarif</a>
+        </div>
+    </div>
+</div>

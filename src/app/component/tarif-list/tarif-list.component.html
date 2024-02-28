@@ -1,5 +1,5 @@
-<ul >
-    <li >
-        <app-tarif-item></app-tarif-item>
+<ul class="wall">
+    <li *ngFor="let tarif of tarifList">
+        <app-tarif-item [tarifItem]="tarif"></app-tarif-item>
     </li>
 </ul>
