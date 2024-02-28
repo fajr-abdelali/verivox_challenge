@@ -86,4 +86,36 @@ export class DataService {
     return of(this.mockData);
   }
 
+  getBenifits(): Observable<string[]> {
+    const allBenefits = this.mockData.flatMap(tarif => tarif.benefit);
+    return of([... new Set(allBenefits)]);
+  }
+
+  getDownloadspeeds(): Observable<number[]> {
+    const allDownloadsSpeeds = this.mockData.map(tarif => tarif.debit.download);
+    return of([... new Set(allDownloadsSpeeds)]);
+  }
+
+  getUploadspeeds(): Observable<number[]> {
+    const allDownloadsSpeeds = this.mockData.map(tarif => tarif.debit.upload);
+    return of([... new Set(allDownloadsSpeeds)]);
+  }
+
+  getTarifByBenifits(benifit: string): Observable<Tarif[]> {
+    const sortedData = this.mockData.filter(tarif => {
+      return tarif.benefit.includes(benifit);
+    });
+    return of(sortedData);
+  }
+
+  getTarifByDownload(slectedDownload: number): Observable<Tarif[]> {
+    const tarif = this.mockData.filter(tarif => tarif.debit.download == slectedDownload)
+    return of(tarif);
+  }
+
+  getTarifByUpload(slectedUpload: number): Observable<Tarif[]> {
+    const tarif = this.mockData.filter(tarif => tarif.debit.upload == slectedUpload)
+    return of(tarif);
+  }
+
 }

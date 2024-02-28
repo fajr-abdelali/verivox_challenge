@@ -1,1 +1,20 @@
-<p>filter works!</p>
+<select class="filter--download-speed" name="download-speed" id="download-speed" (change)="onDownloalChange($event.target)">
+    <option *ngFor="let download of downloads" (value)="download">{{ download }}</option>
+</select>
+
+<select class="filter--upload-speed" name="upload-speed" id="upload-speed" (change)="onUploadChange($event.target)">
+    <option *ngFor="let upload of uploads" (value)="upload">{{ upload }}</option>
+</select>
+
+<select name="benifits" class="filter--benefits" (change)="onFilterBenifitsChange($event.target)">
+    <option value="">Select benifit</option>
+    <option value="">All</option>
+    <option *ngFor="let benifit of benifits" [value]="benifit"> {{benifit}} </option>
+</select>
+
+<select name="speed-price" class="filter--speed-price" (change)="onFilterChange($event.target)">
+    <option value="">Sort By</option>
+    <option value="upload">upload</option>
+    <option value="download">download</option>
+    <option value="price">price</option>
+</select>

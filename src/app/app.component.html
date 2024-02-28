@@ -1,3 +1,12 @@
 <h1 class="title">{{ title }}</h1>
-<app-filter></app-filter>
+<app-filter
+[downloads]="downloadSpeeds"
+[uploads]="uploadSpeeds"
+(SlectedDownload)="applyDownloadFilter($event)" 
+(SlectedUpload)="applyUploadFilter($event)" 
+
+(filterChanged)="applyFilters($event)" 
+(filterBenifitsChanged)="applyFiltersBenifits($event)" 
+[benifits]="benifits"
+></app-filter>
 <app-tarif-list [tarifList]="tarifList"></app-tarif-list>
