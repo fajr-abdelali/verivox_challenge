@@ -1,0 +1,11 @@
+:host{
+    display: grid;
+    place-items: center;
+    padding: .8rem;
+    ul{
+        flex-direction: column;
+        list-style: none;
+        width: 100%;
+        margin: 0;
+    }
+}
